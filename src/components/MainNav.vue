@@ -43,7 +43,7 @@ export default {
           <action-button v-else text="Sign In" @click="loginUser" />
         </div>
       </div>
-      <the-sub-nav />
+      <the-sub-nav v-if="isLoggedIn" />
     </div>
   </header>
 </template>
