@@ -7,11 +7,16 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      primary: true,
+    };
+  },
 };
 </script>
 
 <template>
-  <button class="primary">
+  <button :class="{ primary }">
     {{ text }}
   </button>
 </template>
