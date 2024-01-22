@@ -36,3 +36,15 @@ export const evenOrOdd = (num) => {
 };
 
 export const multiply = (num1, num2) => num1 * num2;
+
+console.log('--------MAP-------------');
+const numbers = [1, 2, 3, 4, 5];
+const double = numbers.map((number) => number * 2);
+console.log(double);
+
+const square = numbers.map((number) => number * number);
+console.log(square);
+
+const people = ['John', 'Jill', 'Jack', 'James', 'Jenny'];
+const upperCase = people.map((person) => person.toUpperCase());
+console.log(upperCase);
