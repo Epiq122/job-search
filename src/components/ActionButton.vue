@@ -38,5 +38,6 @@ button {
   @apply hover:shadow-blue border-0 bg-brand-blue-1 text-white;
 }
 .secondary {
+  @apply hover:bg-brand-blue-2 bg-transparent text-brand-blue-1 hover:text-white;
 }
 </style>
