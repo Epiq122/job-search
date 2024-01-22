@@ -7,7 +7,7 @@ const allItems = [...fruits, ...vegetables]; // spread operator
 
 console.log(items);
 console.log(allItems);
-console.log('---------------------');
+console.log('--------TESTS-------------');
 // objects properties and methods
 const developer = {
   salary: 100000,
@@ -34,3 +34,5 @@ export const evenOrOdd = (num) => {
     return 'odd';
   }
 };
+
+export const multiply = (num1, num2) => num1 * num2;
