@@ -17,7 +17,14 @@ describe('MainNav', () => {
       'Life at Epiq Careers',
       'How we hire',
       'Students',
-      'Jobs'
+      'Jobs',
     ]);
+  });
+  describe('when the user logs in', () => {
+    it('displays the user profile picture', () => {
+      render(MainNav);
+      const profileImage = screen.queryByRole('img', { name: 'user profile image' });
+      expect(profileImage).not.toBeInTheDocument();
+    });
   });
 });

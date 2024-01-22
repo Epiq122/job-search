@@ -9,4 +9,6 @@ export default {
 };
 </script>
 
-<template><img class="h-8 w-8 rounded-3xl object-contain" :src="profileImage" /></template>
+<template>
+  <img alt="user profile image" class="h-8 w-8 rounded-3xl object-contain" :src="profileImage" />
+</template>
