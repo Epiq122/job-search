@@ -3,7 +3,8 @@ export default {
   name: 'MainNav',
   data() {
     return {
-      company: 'Epiq Careers'
+      company: 'Epiq Careers',
+      author: 'Rob Gleason'
     };
   }
 };
@@ -14,6 +15,7 @@ export default {
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div class="flex-no-wrap border-brand-gray-1 mx-auto flex h-full border-b border-solid px-8">
         <a href="/" class="flex h-full items-center text-xl">{{ company }}</a>
+        <h2 class="ml-8 flex h-full items-center">Developed by {{ author }}</h2>
       </div>
     </div>
   </header>
