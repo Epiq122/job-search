@@ -16,7 +16,7 @@ const developer = {
   lookingForWork: true,
   doubleSalary() {
     return this.salary * 2;
-  }
+  },
 };
 
 console.log(developer.salary);
@@ -48,3 +48,11 @@ console.log(square);
 const people = ['John', 'Jill', 'Jack', 'James', 'Jenny'];
 const upperCase = people.map((person) => person.toUpperCase());
 console.log(upperCase);
+
+console.log('--------DYNAMIC OBJECT PROPERTIES-------------');
+const favoriteFood = 'steak';
+
+const goodFoods = {
+  [favoriteFood]: true,
+};
+console.log(goodFoods); // {steak: true}
