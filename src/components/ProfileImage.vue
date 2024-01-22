@@ -3,7 +3,7 @@ export default {
   name: 'ProfileImage',
   data() {
     return {
-      profileImage: '@/images/profile.jpg',
+      profileImage: '/images/profile.jpeg',
     };
   },
 };
