@@ -23,7 +23,7 @@ describe('MainNav', () => {
   describe('when the user logs in', () => {
     it('displays the user profile picture', () => {
       render(MainNav);
-      const profileImage = screen.queryByRole('img', { name: 'user profile image' });
+      const profileImage = screen.queryByRole('img', { name: /user profile image/i });
       expect(profileImage).not.toBeInTheDocument();
     });
   });
