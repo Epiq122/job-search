@@ -16,6 +16,14 @@ export default {
       isLoggedIn: false,
     };
   },
+  methods: {
+    loginUser() {
+      this.isLoggedIn = true;
+    },
+    logoutUser() {
+      this.isLoggedIn = false;
+    },
+  },
 };
 </script>
 
@@ -32,8 +40,8 @@ export default {
           </ul>
         </nav>
         <div class="ml-auto flex h-full items-center">
-          <profile-image v-if="isLoggedIn" />
-          <action-button v-else />
+          <profile-image v-if="isLoggedIn" @click="logoutUser" />
+          <action-button v-else @click="loginUser" />
         </div>
       </div>
     </div>
