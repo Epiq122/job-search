@@ -12,11 +12,19 @@ export default {
       primary: true,
     };
   },
+  computed: {
+    buttonClass() {
+      return {
+        primary: this.primary,
+        secondary: !this.primary,
+      };
+    },
+  },
 };
 </script>
 
 <template>
-  <button :class="{ primary }">
+  <button :class="buttonClass">
     {{ text }}
   </button>
 </template>
