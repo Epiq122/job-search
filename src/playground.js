@@ -24,3 +24,13 @@ console.log(developer.experience);
 console.log(developer.techStack);
 console.log(developer.lookingForWork);
 console.log(developer.doubleSalary());
+
+console.log('---------------------');
+
+export const evenOrOdd = (num) => {
+  if (num % 2 === 0) {
+    return 'even';
+  } else {
+    return 'odd';
+  }
+};
