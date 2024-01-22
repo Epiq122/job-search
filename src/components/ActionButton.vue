@@ -6,16 +6,16 @@ export default {
       type: String,
       required: true,
     },
-    isPrimary: {
-      type: Boolean,
-      default: true,
+    type: {
+      type: String,
+      default: 'primary',
     },
   },
   computed: {
     buttonClass() {
       return {
-        primary: this.isPrimary,
-        secondary: !this.isPrimary,
+        primary: this.type === 'primary',
+        secondary: this.type === 'secondary',
       };
     },
   },
