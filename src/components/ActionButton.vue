@@ -8,7 +8,11 @@ export default {
     },
     type: {
       type: String,
+      required: false,
       default: 'primary',
+      validator: (value) => {
+        return ['primary', 'secondary'].includes(value);
+      },
     },
   },
   computed: {
