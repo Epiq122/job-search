@@ -6,17 +6,16 @@ export default {
       type: String,
       required: true,
     },
-  },
-  data() {
-    return {
-      primary: true,
-    };
+    isPrimary: {
+      type: Boolean,
+      default: true,
+    },
   },
   computed: {
     buttonClass() {
       return {
-        primary: this.primary,
-        secondary: !this.primary,
+        primary: this.isPrimary,
+        secondary: !this.isPrimary,
       };
     },
   },
