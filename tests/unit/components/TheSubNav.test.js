@@ -5,6 +5,11 @@ describe('TheSubNav', () => {
   describe('when user is on jobs page', () => {
     it('displays job count', () => {
       render(TheSubNav, {
+        global: {
+          stubs: {
+            ['font-awesome-icon']: true,
+          },
+        },
         data() {
           return {
             onJobResultsPage: true,
@@ -18,6 +23,11 @@ describe('TheSubNav', () => {
   describe('when user is not jobs page', () => {
     it('does not display job count', () => {
       render(TheSubNav, {
+        global: {
+          stubs: {
+            ['font-awesome-icon']: true,
+          },
+        },
         data() {
           return {
             onJobResultsPage: false,

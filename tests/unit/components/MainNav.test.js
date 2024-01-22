@@ -3,13 +3,23 @@ import userEvent from '@testing-library/user-event';
 import MainNav from '@/components/MainNav.vue';
 
 describe('MainNav', () => {
+  const renderMainNav = () => {
+    render(MainNav, {
+      global: {
+        stubs: {
+          ['font-awesome-icon']: true,
+        },
+      },
+    });
+  };
   it('displays the company name', () => {
-    render(MainNav);
+    renderMainNav();
     const companyName = screen.getByText('Epiq Careers');
     expect(companyName).toBeInTheDocument();
   });
   it('displays nav items for navigation bar', () => {
-    render(MainNav);
+    renderMainNav();
+
     const navItems = screen.getAllByRole('listitem');
     const navText = navItems.map((item) => item.textContent);
     expect(navText).toEqual([
@@ -23,7 +33,8 @@ describe('MainNav', () => {
   });
   describe('when the user logs in', () => {
     it('displays the user profile picture', async () => {
-      render(MainNav);
+      renderMainNav();
+
       let profileImage = screen.queryByRole('img', { name: /user profile image/i });
       expect(profileImage).not.toBeInTheDocument();
 
