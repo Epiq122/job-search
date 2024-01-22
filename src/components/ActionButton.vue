@@ -2,8 +2,8 @@
 export default {
   name: 'ActionButton',
   methods: {
-    handleClick() {
-      console.log('Sign In');
+    handleClick(event) {
+      console.log(event);
     },
   },
 };
