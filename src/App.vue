@@ -10,7 +10,5 @@ export default {
 </script>
 
 <template>
-  <nav>
-    <MainNav />
-  </nav>
+  <main-nav />
 </template>
