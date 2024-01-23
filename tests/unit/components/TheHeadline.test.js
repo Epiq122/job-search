@@ -35,6 +35,7 @@ describe('TheHeadline', () => {
     });
 
     expect(actionPhrase).toBeInTheDocument();
+    vi.useRealTimers();
   });
 
   it('removes interval when component disappears', () => {
