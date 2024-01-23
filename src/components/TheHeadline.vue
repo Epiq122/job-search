@@ -18,7 +18,7 @@ export default {
   created() {
     this.changeTitle();
   },
-  beforeUnMount() {
+  beforeUnmount() {
     clearInterval(this.interval);
   },
   methods: {
