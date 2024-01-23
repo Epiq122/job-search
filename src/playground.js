@@ -56,3 +56,18 @@ const goodFoods = {
   [favoriteFood]: true,
 };
 console.log(goodFoods); // {steak: true}
+
+console.log('--------SETTIMEOUT SETINTERVAL CLEARINTERVAL-------------');
+
+setTimeout(() => {
+  console.log('I will print 2 seconds after the page loads');
+}, 2000);
+
+const interval = setInterval(() => {
+  console.log('I will print every 2 seconds');
+}, 2000);
+
+// this will stop the interval after 10 seconds
+setTimeout(() => {
+  clearInterval(interval);
+}, 10000);
