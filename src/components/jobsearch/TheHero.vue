@@ -1,6 +1,6 @@
 <script>
-import TheHeadline from '@/components/TheHeadline.vue';
-import JobSearchForm from './JobSearchForm.vue';
+import TheHeadline from '@/components/jobsearch/TheHeadline.vue';
+import JobSearchForm from '@/components/jobsearch/JobSearchForm.vue';
 export default {
   name: 'TheHero',
   components: {
