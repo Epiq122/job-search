@@ -17,6 +17,9 @@ export default {
     updateRole(role) {
       this.role = role;
     },
+    updateLocation(location) {
+      this.location = location;
+    },
   },
 };
 </script>
@@ -37,7 +40,7 @@ export default {
       >
       <div class="relative flex h-full flex-1 items-center pl-3">
         <label class="absolute -top-10 left-0">Where?</label>
-        <text-input placeholder="Vancouver" />
+        <text-input placeholder="Vancouver" @handle-input="updateLocation" />
       </div>
     </div>
     <action-button text="Search" type="secondary" class="rounded-r-3xl" />
