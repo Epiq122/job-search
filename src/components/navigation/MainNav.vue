@@ -12,8 +12,6 @@ export default {
   },
   data() {
     return {
-      company: 'Epiq Careers',
-      url: 'https://careers.google.com',
       navItems: ['Teams', 'Location', 'Life at Epiq Careers', 'How we hire', 'Students', 'Jobs'],
       isLoggedIn: false,
     };
@@ -35,7 +33,9 @@ export default {
   <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div class="flex-no-wrap mx-auto flex h-full border-b border-solid border-brand-gray-1 px-8">
-        <a :href="url" class="flex h-full items-center text-xl">{{ company }}</a>
+        <router-link :to="{ name: 'Home' }" class="flex h-full items-center text-xl"
+          >Epiq Careers</router-link
+        >
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
             <li v-for="navItem in navItems" :key="navItem" class="ml-9 h-full first:ml-0">
