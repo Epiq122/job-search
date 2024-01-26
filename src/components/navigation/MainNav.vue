@@ -12,7 +12,14 @@ export default {
   },
   data() {
     return {
-      navItems: ['Teams', 'Location', 'Life at Epiq Careers', 'How we hire', 'Students', 'Jobs'],
+      navItems: [
+        { text: 'Teams', url: '/' },
+        { text: 'Location', url: '/' },
+        { text: 'Life at Epiq Careers', url: '/' },
+        { text: 'How we hire', url: '/' },
+        { text: 'Students', url: '/' },
+        { text: 'Jobs', url: '/jobs/results' },
+      ],
       isLoggedIn: false,
     };
   },
@@ -38,8 +45,10 @@ export default {
         >
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
-            <li v-for="navItem in navItems" :key="navItem" class="ml-9 h-full first:ml-0">
-              <a href="/" class="flex h-full items-center py-2.5">{{ navItem }}</a>
+            <li v-for="navItem in navItems" :key="navItem.text" class="ml-9 h-full first:ml-0">
+              <router-link :to="navItem.url" class="flex h-full items-center py-2.5">{{
+                navItem.text
+              }}</router-link>
             </li>
           </ul>
         </nav>
