@@ -1,13 +1,14 @@
 <script>
+import MainNav from '@/components/navigation/MainNav.vue';
 export default {
   name: 'App',
+  components: {
+    MainNav,
+  },
 };
 </script>
 
 <template>
-  <div>
-    <router-link to="/">Home</router-link> |
-    <router-link to="jobs/results">Job Results</router-link>
-  </div>
+  <main-nav />
   <router-view />
 </template>
