@@ -1,13 +1,15 @@
 import { render, screen } from '@testing-library/vue';
 import userEvent from '@testing-library/user-event';
 import MainNav from '@/components/navigation/MainNav.vue';
+import { RouterLinkStub } from '@vue/test-utils';
 
 describe('MainNav', () => {
   const renderMainNav = () => {
     render(MainNav, {
       global: {
         stubs: {
-          ['font-awesome-icon']: true,
+          'font-awesome-icon': true,
+          RouterLink: RouterLinkStub,
         },
       },
     });
