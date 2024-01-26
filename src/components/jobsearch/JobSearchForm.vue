@@ -40,11 +40,7 @@ export default {
       >
       <div class="relative flex h-full flex-1 items-center pl-3">
         <label class="absolute -top-10 left-0">Where?</label>
-<<<<<<< HEAD
-        <text-input placeholder="Vancouver, BC" @handle-input="updateLocation" />
-=======
         <text-input v-model="location" placeholder="Vancouver" />
->>>>>>> emittingEvents/1
       </div>
     </div>
     <action-button text="Search" type="secondary" class="rounded-r-3xl" />
