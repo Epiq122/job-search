@@ -40,7 +40,7 @@ export default {
       >
       <div class="relative flex h-full flex-1 items-center pl-3">
         <label class="absolute -top-10 left-0">Where?</label>
-        <text-input placeholder="Vancouver" @handle-input="updateLocation" />
+        <text-input placeholder="Vancouver, BC" @handle-input="updateLocation" />
       </div>
     </div>
     <action-button text="Search" type="secondary" class="rounded-r-3xl" />
